@@ -4,7 +4,7 @@
 
 // יצירת מופע Axios עם הגדרות ברירת מחדל
 const api = axios.create({
-    baseURL: "http://localhost:5106",
+    baseURL: process.env.REACT_APP_API_URL,
     headers: {
         'Content-Type': 'application/json',
     }
