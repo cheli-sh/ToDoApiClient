@@ -11,7 +11,7 @@ function App() {
       console.log("Fetched todos:", todos); // בדיקה מה מוחזר מהשרת
       setTodos(Array.isArray(todos) ? todos : []); // מבטיחים שהתוצאה תהיה מערך
     } catch (error) {
-      console.error("Error fetching todos:", error);
+      // console.error("Error fetching todos:", error);
       setTodos([]); // במקרה של שגיאה, נמנע קריסת האפליקציה
     }
   }
