@@ -18,7 +18,7 @@ api.interceptors.response.use(
     },
     (error) => {
         // אם יש שגיאה בתגובה
-        console.error("Axios Response Error Interceptor:", error); // רישום השגיאה לקונסול
+        // console.error("Axios Response Error Interceptor:", error); // רישום השגיאה לקונסול
         // כאן אפשר להוסיף לוגיקה נוספת לטיפול בשגיאות גלובליות
         // לדוגמה, הצגת הודעה למשתמש, ניסיון חוזר לבקשה וכו'
         return Promise.reject(error); // חשוב לזרוק את השגיאה כדי שהפונקציה הקוראת תוכל לטפל בה
@@ -31,7 +31,7 @@ export default {
             const result = await api.get('/items');
             return result.data;
         } catch (error) {
-            console.error("Error getting tasks:", error); // רישום שגיאה ספציפית לפונקציה
+            // console.error("Error getting tasks:", error); // רישום שגיאה ספציפית לפונקציה
             throw error; // זריקת השגיאה למעלה
         }
     },
